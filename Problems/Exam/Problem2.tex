@@ -1,0 +1,50 @@
+This problem involves setting up the truncation error analysis for the given fully implicit mass equation with constant positive velocity shown below.
+
+\begin{equation*}
+\text{Difference Equation: }\frac{\rho^{n+1}_j-\rho^{n}_j}{\Delta t} + v \frac{\rho^{n+1}_j-\rho^{n+1}_{j-1}}{\Delta x_j} = 0
+\end{equation*}
+
+\newpart{2}
+ Plot an clearly state the variable that you are making the error evaluation about.  
+%
+% Solution
+%
+\iftoggle{Solution}{
+  \vspace{12pt}
+  \begin{addmargin}[1em]{2em}
+    \textbf{Solution:}
+    \vspace{12pt}
+
+Use a Taylor series to expand about the point $\rho^{n+1}_j$.  We need one expression for $\rho^{n+1}_{j-1}$ and one for $\rho^n_j$:
+
+\centerline{
+  \mbox{
+    \includegraphics[width=2in]{../Figures/TaylorSol.pdf}
+  }
+}
+   \end{addmargin}
+}
+\vfill
+
+\newpart{6}
+Write the Taylor series expansion for the two remaining variables about the point chosen above. (NOTE: you don't have to do anything beyond writing the Taylor series expansion.)
+%
+% Solution
+%
+\iftoggle{Solution}{
+  \vspace{12pt}
+  \begin{addmargin}[1em]{2em}
+    \textbf{Solution:}
+    \vspace{12pt}
+
+\begin{equation*}
+   \rho^n_j = \rho^{n+1}_j - \frac{\Delta t}{1!} \left.\frac{\partial \rho}{\partial t}\right|^{n+1}_j + \frac{\Delta t^2}{2!} \left.\frac{\partial^2 \rho}{\partial t^2}\right|^{n+1}_j - \frac{\Delta t^3}{3!} \left.\frac{\partial^3 \rho}{\partial t^3}\right|^{n+1}_j + \cdots
+\end{equation*}
+\begin{equation*}
+   \rho^{n+1}_{j-1} = \rho^{n+1}_j - \frac{\Delta x}{1!} \left.\frac{\partial \rho}{\partial x}\right|^{n+1}_j + \frac{\Delta x^2}{2!} \left.\frac{\partial^2 \rho}{\partial x^2}\right|^{n+1}_j - \frac{\Delta x^3}{3!} \left.\frac{\partial^3 \rho}{\partial x^3}\right|^{n+1}_j + \cdots
+\end{equation*}
+
+   \end{addmargin}
+}
+
+\vfill

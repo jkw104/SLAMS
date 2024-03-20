@@ -1,0 +1,125 @@
+%===========================================================================================
+% TEMPLATE FOR STANDARD HOMEWORK
+% (with some sample problem types)
+% Original by Laura
+% Modified by Justin Watson
+%===========================================================================================
+\documentclass[11pt,epsfig]{article}
+
+\usepackage{amsmath,amssymb}   % Provies math symbols 
+\usepackage{mathtools}         % Tools for mathematical typesetting 
+\usepackage{graphics}          % Inclusion of graphics in LaTex documents
+\usepackage{graphicx}          % Extensions to graphics
+\usepackage{scrextend}         % Adds ability to change margin on a block of text.
+\usepackage{etoolbox}          % Adds programming facilities 
+\usepackage{mhchem}            % Adds ability to correctly write chemical reactions
+\usepackage{enumitem}          % Controls layout of itemize, enumerate, etc.
+
+%===========================================================================================
+% Create logical variables to turn on or off solutions and graphics elements
+%===========================================================================================
+
+\providetoggle{Solution}
+\settoggle{Solution}{false}    % false = do not typeset solution; true = typeset solution 
+
+\providetoggle{NoFig}
+\settoggle{NoFig}{true}        % true = inlcude graphics; false = do not include graphics
+
+\oddsidemargin=0in
+\evensidemargin=0in
+\textwidth=6.3in
+\topmargin=-.5in
+\textheight=9in
+
+\parindent=0in
+\pagestyle{empty}
+
+\input{testpoints}
+
+\begin{document}
+
+\iftoggle{Solution}{
+  \settoggle{NoFig}{false}     % This is currently set to show certain graphics when 
+}                              % solution is true and others when solution is false.
+
+%===========================================================================================
+% Cover Sheet
+%===========================================================================================
+
+\centerline{\huge \bf Course Title or Topic}       
+\vfill
+\centerline{\huge \bf Course Number: Homework Number}   
+\vfill
+\vfill
+\vfill
+\vfill
+\vfill
+\vfill
+
+{\bf Reread the homework requirements before starting this homework, they are :}
+\vspace{1pc}
+
+\begin{itemize}      % (change info. as desired)
+    \item  Include your name and the date on each page of the homework.
+
+    \item  Number and restate each problem in your homework.
+
+    \item  Clearly list all assumptions made while solving each problem.
+    
+	\item  Show all work, clearly and in order, if you want to get full credit.  I reserve the right to take off points if I cannot see how you 	arrived at your answer (even if your final answer is correct).
+	
+	\item  Justify your answers algebraically whenever possible to ensure 
+	full credit.
+
+    \item  Show all units when substituting values into equations and clearly show any unit conversion.	
+	\item  Clearly indicate your final answer (box your answer or otherwise highlight it).
+
+	\item  Please keep your written answers brief; be clear and to the point.
+	I will take points off for rambling and for incorrect or irrelevant 
+	statements.
+
+	\item  Reference the source of any data or constants.
+		
+	\item  This homework has 3 problems  and is worth 35 points, partial credit will be given for incomplete answers.  If you are not sure how to answer a problem give as much information as you can.	
+	
+	\item  Good luck!
+\end{itemize}
+
+\vfill \vfill \vfill
+
+\clearpage
+
+
+%===========================================================================================
+% Question 1
+%===========================================================================================
+
+\begin{problem}{5}
+\let\clearpage\relax
+\input{../Problems/Homework/Problem1}
+\end{problem}
+
+%===========================================================================================
+% Question 2
+%===========================================================================================
+
+\begin{problem}{15}
+\let\clearpage\relax
+\input{../Problems/Homework/Problem2}
+\end{problem}
+
+%===========================================================================================
+% Question 3
+%===========================================================================================
+
+\begin{problem}{15}
+\let\clearpage\relax
+\input{../Problems/Homework/Problem3}
+\end{problem}
+
+%===========================================================================================
+
+\showpoints
+\end{document}
+
+

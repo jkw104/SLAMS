@@ -1,0 +1,208 @@
+%===========================================================================================
+% TEMPLATE FOR STANDARD EXAM
+% (with some sample problem types)
+% Original by Laura
+% Modified by Justin Watson
+%===========================================================================================
+\documentclass[11pt,epsfig]{article}
+
+\usepackage{amsmath,amssymb}   % Provies math symbols 
+\usepackage{mathtools}         % Tools for mathematical typesetting 
+\usepackage{graphics}          % Inclusion of graphics in LaTex documents
+\usepackage{graphicx}          % Extensions to graphics
+\usepackage{scrextend}         % Adds ability to change margin on a block of text.
+\usepackage{etoolbox}          % Adds programming facilities 
+\usepackage{mhchem}            % Adds ability to correctly write chemical reactions
+\usepackage{enumitem}          % Controls layout of itemize, enumerate, etc.
+
+%===========================================================================================
+% Create logical variables to turn on or off solutions and graphics elements
+%===========================================================================================
+
+\providetoggle{Solution}
+\settoggle{Solution}{false}    % false = do not typeset solution; true = typeset solution 
+
+\providetoggle{NoFig}
+\settoggle{NoFig}{true}        % true = inlcude graphics; false = do not include graphics
+
+\oddsidemargin=0in
+\evensidemargin=0in
+\textwidth=6.3in
+\topmargin=-.5in
+\textheight=9in
+
+\parindent=0in
+\pagestyle{empty}
+
+\input{testpoints}
+
+\begin{document}
+
+\iftoggle{Solution}{
+  \settoggle{NoFig}{false}     % This is currently set to show certain graphics when 
+}                              % solution is true and others when solution is false.
+
+%===========================================================================================
+% Cover Sheet
+%===========================================================================================
+
+\centerline{\huge \bf Course Title}         
+\vfill
+\centerline{\huge \bf Exam 1: Topic}        
+\vfill \vfill
+   
+Class Number and Section                     
+
+MM/DD/YYYY \hfill                           % (date of test)
+{\bf Name: } $\underbracket[0.5pt][0pt]{\hspace{2.7in}}_{\mbox{\tiny Please print your name clearly}}$
+\vfill \vfill \vfill
+
+{\bf Read all of the following information before starting the exam:}
+\vspace{1pc}
+
+\begin{itemize}                             % (change info. as desired)
+	\item  Show all work, clearly and in order, if you want to get full credit.  I reserve the right to take off points if I cannot see how you 	arrived at your answer (even if your final answer is correct).
+	
+	\item Justify your answers algebraically whenever possible to ensure 
+	full credit. When you do use your calculator (if a calculator is allowed),
+	sketch all relevant graphs and explain all relevant mathematics.
+	
+	\item  Circle or otherwise indicate your final answers.
+
+	\item  Please keep your written answers brief; be clear and to the point.
+	I will take points off for rambling and for incorrect or irrelevant 
+	statements.
+		
+	\item  This test has 10 problems        % (number of problems)
+	and is worth 100 points,                % (insert total number of points)  
+   partial credit will be given for incomplete answers.  If you are
+   not sure how to answer a problem give as much information as you can.	
+   It is your responsibility to make sure that you have all of the pages!
+	
+	\item  You will have 1 hour 50 minutes to complete the exam.  
+	
+	\item  Good luck!
+\end{itemize}
+
+\vfill \vfill \vfill
+
+\clearpage
+
+%===========================================================================================
+% Question 1
+%===========================================================================================
+
+\begin{problem}{8}
+\let\clearpage\relax
+\input{../Problems/Exam/Problem1}
+\vfill
+\end{problem}
+
+\clearpage
+
+%===========================================================================================
+% Question 2
+%===========================================================================================
+
+\begin{problem}{8}
+\let\clearpage\relax
+\input{../Problems/Exam/Problem2}
+\vfill
+\end{problem}
+
+\clearpage
+
+%===========================================================================================
+% Scrap Page 
+%===========================================================================================
+% NOTE: The scrap page and equation sheet are not typeset if solution is true.  
+\iftoggle{NoFig}{
+
+
+{\large \bf Scrap Page}
+
+(please do not remove this page from the test packet)
+\clearpage
+
+%===========================================================================================
+% Equation Sheet
+%===========================================================================================
+{\large \bf Useful Equations}
+\vspace{12pt}
+
+\begin{equation*}
+   f(x) = f(x_0) + \left( x - x_0 \right)\left. \frac{ d f }{ d x } \right|_{x=x_0}  + \left( x - x_0 \right)^2\left. \frac{1}{2} \frac{ d^2 f }{ d x^2 } \right|_{x=x_0}  + \cdots
+\end{equation*}
+
+\begin{multline*}
+   f(x,y) = f(x_0, y_0) +
+   \Delta x \left. \frac{ \partial f }{\partial x } \right|_{x_0, y_0} +
+   \Delta y \left. \frac{ \partial f }{\partial y } \right|_{x_0, y_0} +
+   \Delta x^2 \frac{1}{2} \left. \frac{ \partial^2 f }{\partial x^2 } \right|_{x_0, y_0} +\\
+   \Delta x \Delta y \left. \frac{ \partial^2 f }{ \partial x \partial y } \right|_{x_0, y_0} +
+   \Delta y^2 \frac{1}{2} \left. \frac{ \partial^2 f }{\partial y^2 } \right|_{x_0, y_0} + \cdots
+\end{multline*}
+
+\begin{multline*}
+   g(x,y) = g(x_0, y_0) +
+   \Delta x \left. \frac{ \partial g }{\partial x } \right|_{x_0, y_0} +
+   \Delta y \left. \frac{ \partial g }{\partial y } \right|_{x_0, y_0} +
+   \Delta x^2 \frac{1}{2} \left. \frac{ \partial^2 g }{\partial x^2 } \right|_{x_0, y_0} +\\
+   \Delta x \Delta y \left. \frac{ \partial^2 g }{ \partial x \partial y } \right|_{x_0, y_0} +
+   \Delta y^2 \frac{1}{2} \left. \frac{ \partial^2 g }{\partial y^2 } \right|_{x_0, y_0} + \cdots
+\end{multline*}
+
+\begin{equation*}
+\frac{\partial \rho}{\partial t}+\nabla\cdot(\rho \vec{v})=0
+\end{equation*}
+
+\begin{equation*}
+\frac{\partial \rho e}{\partial t}+\nabla\cdot(\rho e\vec{v})+P\nabla\cdot\vec{v}=q_{wl}
+\end{equation*}
+
+\begin{equation*}
+\frac{\partial \vec{v}}{\partial t}+\vec{v}\nabla\cdot(\vec{v})+\frac{1}{\rho}\nabla P + K\vec{v}^2=0
+\end{equation*}
+
+\begin{equation*}
+         r = \frac{ h_3 }{ h_2 } = \frac{ h_2 }{ h_1 } 
+\end{equation*}
+
+\begin{align*}
+   &f_1 = f_{exact} + a h^p_1\\
+   &f_2 = f_{exact} + a h^p_2\\
+   &f_3 = f_{exact} + a h^p_3
+\end{align*}
+
+\begin{equation*}
+   \frac{ f_3 - f_2 }{ f_2 - f_1 } = \frac{ h^p_2 }{ h^p_1 } = r^p
+\end{equation*}
+
+\begin{equation*}
+   p = \frac{ \ln \left( \frac{ f_3 - f_2 }{ f_2 - f_1 } \right) }{ \ln \left( r \right) }
+\end{equation*}
+
+\begin{equation*}
+   f_{exact} = f_1 - \frac{ f_2 - f_1 }{ r^p - 1 }
+\end{equation*}
+
+\begin{equation*}
+\frac{1}{2} \rho v^2_1 + P_1 = \frac{1}{2} \rho v^2_2 + P_2 + \Delta P_l
+\end{equation*}
+
+\begin{equation*}
+\Delta P_l = 
+\frac{1}{2} \rho v^2_1 
+\left(
+1
+-\frac{A_1}{A_2}
+\right)^2
+\end{equation*} 
+
+
+}
+
+\showpoints
+\end{document}
+
+
