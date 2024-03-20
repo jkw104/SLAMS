@@ -1,0 +1,142 @@
+\documentclass[11pt,letterpaper]{article} %12pt - font size used, letterpaper - papertype, article - document class
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{setspace,graphicx,pdfpages,wrapfig,xfrac,url} %Some useful packages
+
+%\usepackage{amssymb}
+%\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+%% use the graphics package for simple commands
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{enumitem}
+\usepackage{scrextend}  % Adds ability to change margin on a block of text.
+\usepackage{mhchem}     % Adds ability to correctly write chemical reactions% Use etoolbox to toggle solutions on and off
+\usepackage{etoolbox}
+
+
+\providetoggle{Solution}
+\settoggle{Solution}{true}
+
+\input{testpoints}
+
+
+\setlength{\oddsidemargin}{0in} \setlength{\evensidemargin}{0in} %Setting up margins and text height
+\setlength{\topmargin}{0in} \setlength{\headsep}{0.25in}
+\setlength{\textheight}{8.5in} \setlength{\textwidth}{6.5in}
+
+%===========================================================================================
+%                             HEADER
+%===========================================================================================
+
+\pagestyle{myheadings} \markright{Course Title -- HW 1 -- Fall 2023} %Header
+
+\begin{document}
+
+ALLOWED COLLABORATION: You may discuss this assignment and the underlying concepts with your classmates, but your final assignment must be yours alone and reflect your own understanding of the material.
+
+~
+
+{\bf Please read the homework requirements before starting this homework:}
+
+\begin{itemize}                        %%%(change info. as desired)
+    \item  Show your work.
+
+    \item  Write neatly.
+
+    \item  Box your answers.
+		
+\end{itemize}
+
+\vfill \vfill \vfill
+
+\clearpage
+
+%===========================================================================================
+%                           Question 1
+%===========================================================================================
+
+\begin{problem}{10}
+\let\clearpage\relax
+\include{Problems/Problem01}
+\end{problem}
+
+
+%===========================================================================================
+%                           Question 2
+%===========================================================================================
+
+%\begin{problem}{3}
+%\let\clearpage\relax
+%\include{Problems/Problem02}
+%\end{problem}
+
+%===========================================================================================
+%                           Question 3
+%===========================================================================================
+
+%\begin{problem}{3}
+%\let\clearpage\relax
+%\include{Problems/Problem03}
+%\end{problem}
+
+%===========================================================================================
+%                           Question 4
+%===========================================================================================
+
+%\begin{problem}{3}
+%\let\clearpage\relax
+%\include{Problems/Problem04}
+%\end{problem}
+
+%===========================================================================================
+%                           Question 5
+%===========================================================================================
+
+%\begin{problem}{3}
+%\let\clearpage\relax
+%\include{Problems/Problem05}
+%\end{problem}
+
+%===========================================================================================
+%                           Question 6
+%===========================================================================================
+
+%\begin{problem}{3}
+%\let\clearpage\relax
+%\include{Problems/Problem06}
+%\end{problem}
+
+%===========================================================================================
+%                           Question 7
+%===========================================================================================
+
+%\begin{problem}{3}
+%\let\clearpage\relax
+%\include{Problems/Problem07}
+%\end{problem}
+
+%===========================================================================================
+%                           Question 8
+%===========================================================================================
+
+%\begin{problem}{3}
+%\let\clearpage\relax
+%\include{Problems/Problem08}
+%\end{problem}
+
+%===========================================================================================
+%                           Question 9
+%===========================================================================================
+
+%\begin{problem}{3}
+%\let\clearpage\relax
+%\include{Problems/Problem09}
+%\end{problem}
+
+%===========================================================================================
+
+\showpoints
+
+\end{document}
